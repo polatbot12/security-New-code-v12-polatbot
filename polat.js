@@ -9,7 +9,7 @@ app.listen(process.env.PORT);
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
-////////////////mrfix
+////////////////polat bot
 
 // ======== { • const • }======== //
 const { Client, RichEmbed } = require("discord.js");
@@ -25,24 +25,24 @@ const util = require("util");
 const gif = require("gif-search");
 const opus = require("node-opus");
 const ms = require("ms");
-const jimp = require("jimp"); ////////////////mrfix
+const jimp = require("jimp"); ////////////////polat bot
 const { get } = require("snekfetch");
 const guild = require("guild");
 const dateFormat = require("dateformat");
 const pretty = require("pretty-ms");
-client.login("token"); ////////////////mrfix
+client.login("token"); ////////////////polat bot
 const prefix = "prefix";
 var table = require("table").table;
 const Discord = require("discord.js");
 client.on("ready", () => {
-  ////////////////mrfix
+  ////////////////polat bot
   console.log(`Logged in as ${client.user.tag}!`);
 });
 // ======== { • playing • }======== //
 client.on("ready", () => {
-  client.user.setActivity("help | it’s time to secure your server", {
+  client.user.setActivity("help | New Code By Polat Bot", {
     type: "PLAYING"
-  }); ////////////////mrfix
+  }); ////////////////polat bot
   client.user.setStatus("ONLINE");
 });
 // //===============================================[ •help• ]=============================================\\\\
@@ -69,8 +69,8 @@ user
 profile
 Best Discord __AntiSpam__
 Best Discord __AntiShare Everyone & Here & Link .__`;
-    var addserver = `https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2080374975`;
-    var SUPPORT = `https://discord.gg/6ASrSeG`;
+    var addserver = ``;
+    var SUPPORT = ``;
     let embed = new Discord.RichEmbed()
       .setTitle(`${m.author.username}`)
       .setDescription(
@@ -90,11 +90,11 @@ client.on("message", async message => {
       return;
     message.channel.overwritePermissions(message.guild.id, {
       SEND_MESSAGES: false
-    }); ////////////////mrfix
+    }); ////////////////polat bot
     message.channel.send(` **has been locked.**`);
   }
 });
-////////////////mrfix
+////////////////polat
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "unlock")) {
     if (!message.member.hasPermission("MANAGE_CHANNELS")) return;
@@ -120,7 +120,7 @@ client.on("message", message => {
       .setTimestamp()
       .setFooter(`Requested By | ${message.author.username}`)
       .setImage(
-        "https://media.discordapp.net/attachments/725981750135619594/753420592786702448/image0.gif"
+        ""
       )
       .setColor("RANDOM");
     message.channel.send({ embed });
@@ -143,7 +143,7 @@ client.on("message", message => {
       .addField("**Channels** : ", `» ${client.channels.size} `, true)
       .addField("**Users** : ", `» ${client.users.size} `, true)
       .addField("**Bot Name** :  ", `» ${client.user.tag} `, true)
-      .addField("**Bot Owner** :  ", `» MrFIX`, true) // تعديل مهم عدل هذا الرقم لايدي حسابك
+      .addField("**Bot Owner** :  ", `»POLAT BOT`, true) // 
       .setImage("")
       .setFooter(message.author.username, message.author.avatarURL);
     message.channel.send(bot);
@@ -257,7 +257,7 @@ client.on("message", message => {
       )
       .setFooter(
         `${message.author.username}`,
-        "https://media.discordapp.net/attachments/725981750135619594/753420592786702448/image0.gif"
+        ""
       )
       .setThumbnail(heg.avatarURL);
     message.channel.send(id);
@@ -282,12 +282,12 @@ client.on("message", message => {
     };
   if (!config[message.guild.id])
     config[message.guild.id] = {
-      banLimit: 3,
-      chaDelLimit: 3,
-      chaCrLimit: 3,
-      roleDelLimit: 3,
-      kickLimits: 3,
-      roleCrLimits: 3,
+      banLimit: 2,
+      chaDelLimit: 2,
+      chaCrLimit: 2,
+      roleDelLimit: 2,
+      kickLimits: 2,
+      roleCrLimits: 2,
       time: 0.1
     };
   if (message.content.startsWith(prefix + "anti")) {
@@ -330,29 +330,29 @@ client.on("message", message => {
       message.channel.send(
         `**✔️ | Changed \`Role Delete\` To : ${config[message.guild.id].roleDelLimit}**`
       );
-    } ////////////////mrfix
+    } ////////////////polat
     if (message.content.startsWith(prefix + "anti roleC")) {
       if (!num)
         return message.channel.send(
           "**❌ | Type A `Number` After Commands .**"
-        ); ////////////////mrfix
+        ); ////////////////polat
       if (isNaN(num))
         return message.channel.send("**❌ | Only Type `Number` .**");
       config[message.guild.id].roleCrLimits = num;
       message.channel.send(
         `**✔️ | Changed \`Role Create\` To : ${config[message.guild.id].roleCrLimits}**`
       );
-    } ////////////////mrfix
+    } ////////////////polat
     if (message.content.startsWith(prefix + "anti channelD")) {
       if (!num)
         return message.channel.send(
           "**❌ | Type A `Number` After Commands .**"
-        ); ////////////////mrfix
+        ); ////////////////polat
       if (isNaN(num))
         return message.channel.send("**❌ | Only Type `Number` .**");
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
-        ////////////////mrfix
+        ////////////////polat
         `**✔️ | Changed \`Channel Delete\` To : ${config[message.guild.id].chaDelLimit}**`
       );
     }
@@ -360,14 +360,14 @@ client.on("message", message => {
       if (!num)
         return message.channel.send(
           "**❌ | Type A `Number` After Commands .**"
-        ); ////////////////mrfix
+        ); ////////////////polat
       if (isNaN(num))
         return message.channel.send("**❌ | Only Type `Number` .**");
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
         `**✔️ | Changed \`Channel Create\` To : ${config[message.guild.id].chaCrLimit}**`
       );
-    } ////////////////mrfix
+    } ////////////////polat
     if (message.content.startsWith(prefix + "anti time")) {
       if (!num)
         return message.channel.send(
@@ -392,20 +392,20 @@ client.on("channelDelete", async channel => {
   const entry1 = await channel.guild
     .fetchAuditLogs({
       type: "CHANNEL_DELETE"
-    }) ////////////////mrfix
+    }) ////////////////polat bot
     .then(audit => audit.entries.first());
   console.log(entry1.executor.username);
   const entry = entry1.executor;
   if (!config[channel.guild.id])
     config[channel.guild.id] = {
-      banLimit: 3,
-      chaDelLimit: 3,
-      chaCrLimit: 3,
-      roleDelLimit: 3,
-      kickLimits: 3,
-      roleCrLimits: 3,
+      banLimit: 2,
+      chaDelLimit: 2,
+      chaCrLimit: 2,
+      roleDelLimit: 2,
+      kickLimits: 2,
+      roleCrLimits: 2,
       time: 0.1
-    }; ////////////////mrfix
+    }; ////////////////polat 
   if (!anti[channel.guild.id + entry.id]) {
     anti[channel.guild.id + entry.id] = {
       actions: 1
@@ -460,12 +460,12 @@ client.on("channelCreate", async channel => {
     return;
   if (!config[channel.guild.id])
     config[channel.guild.id] = {
-      banLimit: 3,
-      chaDelLimit: 3,
-      chaCrLimit: 3,
-      roleDelLimit: 3,
-      kickLimits: 3,
-      roleCrLimits: 3,
+      banLimit: 2,
+      chaDelLimit: 2,
+      chaCrLimit: 2,
+      roleDelLimit: 2,
+      kickLimits: 2,
+      roleCrLimits: 2,
       time: 0.1
     };
   const entry1 = await channel.guild
@@ -515,7 +515,7 @@ client.on("channelCreate", async channel => {
         if (e) throw e;
       });
     }
-    ////////////////mrfix
+    ////////////////polat
     fs.writeFile("./config.json", JSON.stringify(config, null, 2), function(e) {
       if (e) throw e;
     });
@@ -525,7 +525,7 @@ client.on("channelCreate", async channel => {
       if (e) throw e;
     });
   }
-}); ////////////////mrfix
+}); ////////////////polatbot
 client.on("roleDelete", async channel => {
   const entry1 = await channel.guild
     .fetchAuditLogs({
@@ -536,12 +536,12 @@ client.on("roleDelete", async channel => {
   const entry = entry1.executor;
   if (!config[channel.guild.id])
     config[channel.guild.id] = {
-      banLimit: 3,
-      chaDelLimit: 3,
-      chaCrLimit: 3,
-      roleDelLimit: 3,
-      kickLimits: 3,
-      roleCrLimits: 3,
+      banLimit: 2,
+      chaDelLimit: 2,
+      chaCrLimit: 2,
+      roleDelLimit: 2,
+      kickLimits: 2,
+      roleCrLimits: 2,
       time: 0.1
     };
   if (!anti[channel.guild.id + entry.id]) {
@@ -603,12 +603,12 @@ client.on("roleCreate", async channel => {
   const entry = entry1.executor;
   if (!config[channel.guild.id])
     config[channel.guild.id] = {
-      banLimit: 3,
-      chaDelLimit: 3,
-      chaCrLimit: 3,
-      roleDelLimit: 3,
-      kickLimits: 3,
-      roleCrLimits: 3,
+      banLimit: 2,
+      chaDelLimit: 2,
+      chaCrLimit: 2,
+      roleDelLimit: 2,
+      kickLimits: 2,
+      roleCrLimits: 2,
       time: 0.1
     };
   if (!anti[channel.guild.id + entry.id]) {
@@ -670,12 +670,12 @@ client.on("guildBanAdd", async (guild, user) => {
   const entry = entry1.executor;
   if (!config[guild.id])
     config[guild.id] = {
-      banLimit: 3,
-      chaDelLimit: 3,
-      chaCrLimit: 3,
-      roleDelLimit: 3,
-      kickLimits: 3,
-      roleCrLimits: 3,
+      banLimit: 2,
+      chaDelLimit: 2,
+      chaCrLimit: 2,
+      roleDelLimit: 2,
+      kickLimits: 2,
+      roleCrLimits: 2,
       time: 0.1
     };
   if (!anti[guild.id + entry.id]) {
@@ -733,12 +733,12 @@ client.on("guildKickAdd", async (guild, user) => {
   const entry = entry1.executor;
   if (!config[guild.id])
     config[guild.id] = {
-      banLimit: 3,
-      chaDelLimit: 3,
-      chaCrLimit: 3,
-      roleDelLimit: 3,
-      kickLimits: 3,
-      roleCrLimits: 3,
+      banLimit: 2,
+      chaDelLimit: 2,
+      chaCrLimit: 2,
+      roleDelLimit: 2,
+      kickLimits: 2,
+      roleCrLimits: 2,
       time: 0.1
     };
   if (!anti[guild.id + entry.id]) {
@@ -785,7 +785,7 @@ client.on("guildKickAdd", async (guild, user) => {
   fs.writeFile("./antigreff.json", JSON.stringify(anti, null, 2), function(e) {
     if (e) throw e;
   });
-}); ////////////////mrfix
+}); ////////////////polat bot
 
 client.on("guildMemberRemove", async member => {
   const entry1 = await member.guild
@@ -800,18 +800,18 @@ client.on("guildMemberRemove", async member => {
     const entry = entry2.executor;
     if (!config[member.guild.id])
       config[guild.id] = {
-        banLimit: 3,
-        chaDelLimit: 3,
-        chaCrLimit: 3,
-        roleDelLimit: 3,
-        kickLimits: 3,
-        roleCrLimits: 3,
+        banLimit: 2,
+        chaDelLimit: 2,
+        chaCrLimit: 2,
+        roleDelLimit: 2,
+        kickLimits: 2,
+        roleCrLimits: 2,
         time: 0.1
       };
     if (!anti[member.guild.id + entry.id]) {
       anti[member.guild.id + entry.id] = {
         actions: 1
-      }; ////////////////mrfix
+      }; ////////////////polat
       setTimeout(() => {
         anti[member.guild.id + entry.id].actions = 0;
       }, config[member.guild.id].time * 1000);
@@ -838,7 +838,7 @@ client.on("guildMemberRemove", async member => {
         anti[member.guild.id + entry.id].actions = 0;
         fs.writeFile("./config.json", JSON.stringify(config, null, 2), function(
           e
-        ) {////////////////mrfix
+        ) {////////////////polat
           if (e) throw e;
         });
         fs.writeFile(
@@ -849,7 +849,7 @@ client.on("guildMemberRemove", async member => {
           }
         );
       }
-    } ////////////////mrfix
+    } ////////////////polat
 
     fs.writeFile("./config.json", JSON.stringify(config, null, 2), function(e) {
       if (e) throw e;
@@ -880,7 +880,7 @@ client.on("message", message => {
     });
   }
 });
-////////////////mrfix////////////////mrfix
+////////////////polat////////////////
 client.on("message", message => {
   if (message.content.startsWith(prefix + "antibots off")) {
     if (!message.channel.guild) return;
@@ -897,7 +897,7 @@ client.on("message", message => {
     });
   }
 });
-////////////////mrfix
+////////////////polat
 client.on("guildMemberAdd", member => {
   if (!antibots[member.guild.id])
     antibots[member.guild.id] = {
@@ -906,15 +906,15 @@ client.on("guildMemberAdd", member => {
   if (antibots[member.guild.id].onoff === "Off") return;
   if (member.user.bot) return member.kick();
 });
-////////////////mrfix
+////////////////polat
 fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
   if (err)
     console.error(err).catch(err => {
       console.error(err);
     });
-});////////////////mrfix
+});////////////////polat
 // ======== { • settings • }======== //
-////////////////mrfix
+////////////////polat
 client.on("message", message => {
   if (message.content === prefix + "settings") {
     if (!message.member.hasPermission("Ownership"))
@@ -951,7 +951,7 @@ Enabled:🟢
 Maximum Time : ${config[message.guild.id].time}
 `);
 
-    message.channel.sendEmbed(mrfix);
+    message.channel.sendEmbed();
   }
 });
 // ======== { • anti spam • }======== //
